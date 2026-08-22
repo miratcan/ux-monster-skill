@@ -114,6 +114,6 @@ Interaktif eleman interaktif görünmelidir. Platformun doğal interaction affor
 
 Belirsiz ifadeleri azalt: "Devam Et" yerine "Ödemeye Geç", "Onayla" yerine "Siparişi Onayla" — kullanıcıya daha fazla bağlam sağlar.
 
-## Destructive actions
+## Yıkıcı aksiyonlar
 
 Yıkıcı aksiyonlar normal primary action ile aynı görsel dilde olmamalıdır. Gerektiğinde fiziksel ayrıştırma, farklı görsel ton, confirmation veya undo kullan.
