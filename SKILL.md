@@ -1,63 +1,89 @@
 ---
 name: ux-monster
-description: UI tasarımını bağlamdan başlayarak tasarım kararlarına, estetik kimliğe, design tokenlarına, platform-uygun implementasyona ve doğrulamaya taşıyan framework. Web, mobile, desktop ve framework-agnostic UI geliştirmelerinde kullanılır.
+description: |
+  UI tasarlamak, implement etmek ve mevcut arayüzü review etmek için bağlam-karar-hiyerarşi-token-doğrulama zinciri.
+  Use when: yeni ekran veya akış tasarımı; dashboard, landing, form, settings, onboarding; mevcut UI review/audit; gerekçesiz eleman, jenerik AI estetiği, zayıf hiyerarşi, doğrulanmamış tasarım.
+  Example triggers: "ux-monster", "bu ekranı review et", "şu sayfayı incele", "landing page tasarla", "dashboard yap", "bu UI'ı düzelt", "review et ve düzelt", "neden bu widget var", "tasarımı doğrula".
+  Skip: UI kararı değişmeyen backend/bugfix; mevcut token'a bağlı 1-2 satırlık stil yaması.
 license: Tüm koşullar LICENSE.txt dosyasındadır.
 ---
 
-# Frontend Tasarımı ve Implementasyonu
+# Frontend Tasarımı, Implementasyonu ve Review
 
-İyi bir arayüz yalnızca güzel görünen bir ekran değildir.
+İyi bir arayüz yalnızca güzel görünen bir ekran değildir. Doğru kullanıcıya, doğru bağlamda, doğru işi yaptırır. Tüm veri durumlarında ayakta kalır. Hiyerarşisi, kendine ait estetiği ve platform semantiği vardır. Implementasyonda kaybolmaz. Render edilerek doğrulanır.
 
-İyi bir arayüz:
+## Mod
 
-1. doğru kullanıcıya,
-2. doğru bağlamda,
-3. doğru işi yaptırır,
-4. tüm veri durumlarında ayakta kalır,
-5. doğru görsel hiyerarşiyi kurar,
-6. kendine ait, jenerik olmayan bir estetik kimliğe sahiptir,
-7. erişilebilir ve anlaşılırdır,
-8. kullanılan platformun doğal kurallarına uyar,
-9. tutarlı bir görsel sistem içinde kalır,
-10. gerçek implementasyonda tasarım kararlarını kaybetmez,
-11. ve render edilerek doğrulanabilir.
+İlk iş modu seçmektir. Zincire ondan sonra gir.
+
+**İncele** — review et, audit, ne yanlış, neden böyle görünüyor. Çıktı rapordur. Kod yok. Yazım: `references/07-writing.md`. Rapor: `references/08-review.md`. Analiz için ilgili `01`–`05` dosyalarını oku.
+
+**Düzelt / tasarla / yap / uygula.** Çıktı koddur. Zincir `01` → `05`. Yazım: `references/07-writing.md`. Review raporu yazma.
+
+**Review et ve düzelt.** Önce rapor, sonra listedeki işler. Tek başına "düzelt" bu madde değildir.
+
+Karar veya bulgu `references/06-core-principle.md` formuna inemiyorsa o dosyayı oku. Forma giremeyen şey tasarıma da rapora da girmez.
+
+Kullanıcıya cümle yazmadan `references/07-writing.md` uygula.
+
+## Ne zaman durur
+
+Dur: UI kararı değişmeyen backend, API, şema, bugfix. Mevcut token'a bağlı 1-2 satırlık yama. Böyle işte zinciri baştan işletme. Gerekirse yalnızca ilgili adımı oku (`04` token/implementasyon, `05` doğrulama).
+
+Bağlam zaten netse `01`'i tekrar sorma. Bilineni kullanıcıya geri sorma.
 
 ## Zincir
 
-Bu skill, UI üretimini şu zincir üzerinden ele alır. Zincirdeki her adım ayrı bir referans dosyasına karşılık gelir ve **o adıma gelindiğinde ilgili dosya okunur** — hepsi baştan tek seferde yüklenmez:
+O adıma gelince o dosya okunur. Hepsi baştan yüklenmez.
 
-| # | Adım | Dosya |
-|---|------|-------|
-| 1 | Bağlamı Netleştir (5 eksen) | `references/01-context-and-conflict.md` |
-| 2 | Çelişki Varsa Söyle | `references/01-context-and-conflict.md` |
-| 3 | Varlık Gerekçesi | `references/02-design-decisions.md` |
-| 4 | Veri Durumları | `references/02-design-decisions.md` |
-| 5 | Hiyerarşi | `references/02-design-decisions.md` |
-| 6 | Odak | `references/02-design-decisions.md` |
-| 7 | Konum Farkındalığı | `references/02-design-decisions.md` |
-| 8 | Aksiyon Netliği | `references/02-design-decisions.md` |
-| 9 | Estetik Kimlik | `references/03-aesthetic-identity.md` |
-| 10 | Erişilebilirlik | `references/04-tokens-and-implementation.md` |
-| 11 | Motion | `references/04-tokens-and-implementation.md` |
-| 12 | Design Tokens | `references/04-tokens-and-implementation.md` |
-| 13 | Implementation | `references/04-tokens-and-implementation.md` |
-| 14 | Tutarlılık | `references/05-consistency-and-validation.md` |
-| 15 | Responsive/Adaptive | `references/05-consistency-and-validation.md` |
-| 16 | Doğrulama | `references/05-consistency-and-validation.md` |
-| 17 | Kullanıcı Testi Hipotezi | `references/05-consistency-and-validation.md` |
-| 18 | Temel İlke | `references/06-core-principle.md` |
+| Dosya | Adımlar |
+|-------|---------|
+| `references/01-context-and-conflict.md` | Bağlam, çelişki |
+| `references/02-design-decisions.md` | Varlık, durumlar, hiyerarşi, odak, konum, aksiyon |
+| `references/03-aesthetic-identity.md` | Estetik kimlik |
+| `references/04-tokens-and-implementation.md` | Erişilebilirlik, motion, token, implementasyon |
+| `references/05-consistency-and-validation.md` | Tutarlılık, responsive, doğrulama, test hipotezi |
 
-Bu sıralama katı bir süreç değildir; eksenler birbirini besler. Ancak bir sonraki aşama, önceki aşamadaki önemli kararları yok saymamalıdır.
+Bu tablo hangi dosyanın ne zaman okunacağını gösterir. Adım içeriği dosyanın içindedir. Sıra katı bir süreç değildir. Sonraki adım öncekini yok saymaz.
+
+**Her zaman ayakta, sıra numarası değil:**
+
+- `references/06-core-principle.md` — karar ve bulgu formu
+- `references/07-writing.md` — yazım kuralları (her mod)
+- `references/08-review.md` — review rapor iskeleti (yalnız incele)
+
+## Adım çıktısı
+
+Bir adımı okumak yetmez. O adımın çıktısı söylenebilmelidir. Yoksa adım atlanmış sayılır.
+
+Bu tablo sırayı değil, adımın bitme koşulunu verir. İçerik `01`–`05` içindedir.
+
+| Adım | Bitme koşulu |
+|------|----------------|
+| Bağlam | 5 eksen doldurulmuş, ya da "bilinmiyor; soruyorum çünkü X değişir" |
+| Çelişki | Eksen bağlı çelişki listesi, ya da "yok" |
+| Varlık | Eleman in/out + gerekçe. Gerekçesiz default: out |
+| Veri durumları | Data-driven her eleman için empty / loading / error (+ ürüne özgü) |
+| Hiyerarşi | Kümeler + maliyet→yenilik sırasının uygulandığı yer |
+| Odak | Tarama deseni. Hiyerarşinin hangi araçla fiziksel olduğu |
+| Konum | Uygula veya atla + amaç ekseninden neden |
+| Aksiyon | Primary var mı. Metin. Yıkıcı ayrımı |
+| Estetik | 4–6 named palet + gerekçe. Display/body. Bir imza öğesi |
+| Erişilebilirlik | Keyboard, focus, semantik, isim, kontrast, hedef, reduced motion |
+| Motion | Her animasyonun anlattığı değişim. Yoksa çıkar |
+| Token | Semantic ad, pairing, ölçek. Ham değer yok |
+| Implementasyon | Platform primitive. Token bağlı. Dead implementation yok |
+| Tutarlılık | Visual / behavioral / semantic. Mevcut sistemle çakışma |
+| Responsive | Ne küçülür, taşınır, gizlenir, yeniden sıralanır |
+| Doğrulama | Ne render edilip bakıldı. Yapılamadıysa açıkça söyle |
+| Test hipotezi | Gerekiyorsa 5sn / ilk tık / task completion. Yoksa "gerekmedi" |
 
 ## Nasıl kullanılır
 
-Bir UI görevine başlarken önce bu dosyayı (SKILL.md) oku — bu sana tüm haritayı ve sırayı verir. Sonra göreve göre ilerle:
-
-- Yeni bir tasarım kararına başlıyorsan `references/01-context-and-conflict.md` ile başla, bağlam netleşince `references/02-design-decisions.md`'ye geç.
-- Bağlam zaten netse (kullanıcı önceki mesajda vermişse veya mevcut projeden çıkarılabiliyorsa) doğrudan `references/02-design-decisions.md`'den başlayabilirsin.
-- Yapısal kararlar (hiyerarşi, odak, aksiyon) bitince `references/03-aesthetic-identity.md`'ye geç — palet/tipografi/imza öğesi kararını burada ver.
-- Estetik kimlik netleşince `references/04-tokens-and-implementation.md`'ye geç — erişilebilirlik, motion, token sistemi ve kod implementasyonu burada.
-- Kod yazıldıktan sonra `references/05-consistency-and-validation.md`'ye geç — tutarlılık kontrolü, responsive davranış, render/grayscale doğrulaması burada zorunlu adımlardır.
-- Zincirin bütününe dair bir gerekçelendirme sorusu ("bu karar neden bu şekilde") ortaya çıkarsa `references/06-core-principle.md`'ye bak.
-
-Bir dosyayı okumadan o dosyanın kapsamındaki adımı atlama — özellikle Doğrulama (`references/05-consistency-and-validation.md`) ve Varlık Gerekçesi (`references/02-design-decisions.md`) adımları, sık atlanan ama framework'ün en kritik iki kontrol noktasıdır.
+- Yeni tasarım: `01` ile başla. Bağlam netleşince `02`.
+- Bağlam zaten netse `02` ile başla.
+- Yapı bitince `03` (palet, tipografi, imza).
+- Estetik netleşince `04` (a11y, motion, token, kod).
+- Kod yazıldıktan sonra `05`. Doğrulama ve varlık gerekçesi en sık atlanan iki kontroldür. Atlanmaz.
+- İncele: `08`, yazım `07`, analiz için ilgili `01`–`05`.
+- Gerekçe sorusu: `06`.

@@ -16,6 +16,12 @@ Design Tokens bölümüne (`references/04-tokens-and-implementation.md`) geçmed
 - **Tipografi:** En az iki rol için yazı tipi karakteri (display ve body; gerekirse veri/caption için üçüncü bir utility yazı tipi) — aynı iki fontu her projede tekrar etme, brief'in karakterine göre seçim yap.
 - **Bir imza öğesi:** Bu ekranın akılda kalacağı tek özgün detay (bir grafik tarzı, bir mikro-etkileşim, bir tipografik vurgu). Boldluğu bir yerde harcayıp gerisini sakin tutmak, her yeri eşit derecede "ilginç" yapmaya çalışmaktan daha güçlü sonuç verir.
 
+## Tek fonksiyonel vurgu
+
+Bir görünüm alanında vurgu görevi tek renge aittir. O renk markayı ve birincil aksiyonu taşır. Diğer renkler ya semantiktir (başarı, hata, uyarı) ya dekoratiftir; aynı ekranda marka vurgusuyla yarışmaz.
+
+Bir bölgede dört-beş vurgu seviyesi toplanırsa göz önem sırasını kuramaz ve sayfa jenerik durur. Örnek: bir hero'da turuncu marka butonu, yeşil onay, mor skor kartı ve teal içerik kartı yan yana duruyorsa vurgu tek işe hizmet etmiyor demektir. Palet planında her rengin rolünü ayır: marka ve birincil aksiyon tek renk, semantik durumlar ayrı roller, skor ve grafikler ayrı bir katman. Bu katmanların toplam ağırlığı birincil vurguyu geçmemeli.
+
 ## Jeneriklik kontrolü
 
 Plan çıktıktan sonra kendine şunu sor: *"Bu paleti/tipografiyi, brief'i hiç okumadan, sadece 'bu bir [ürün türü]' bilgisiyle de üretir miydim?"* Cevap evetse, seçim brief'ten değil kategoriden geliyor demektir — bu bir uyarı işaretidir, zorunlu olarak değiştirilmesi gerekmez ama bilinçli bir seçim olduğu teyit edilmelidir.
