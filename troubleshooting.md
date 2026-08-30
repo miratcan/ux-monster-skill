@@ -151,3 +151,113 @@ Error → solution mappings for quick reference. This file grows over time as ne
 **Cause**: Ekran/akış yürüyüşü her review'a uygulandı.
 
 **Solution**: Kapsam kadar yürüyüş. Elemanda adım 17 atlanır, nedeni kapsamda. Kural: `references/08-review.md` işlem.
+
+---
+
+## Error: Gözlem bulgu yazıldı
+
+**Symptom**: "Beş buton var", "çok renk var" başlık. Adversarial yok. İlk cümle çözüm.
+
+**Cause**: Geçiş 1 rapora döküldü. Gözlem, aday, bulgu karıştı.
+
+**Solution**: İki geçiş. Süzgeçler evet demeden başlık açma. `references/08-review.md`.
+
+---
+
+## Error: Zevk süzgeci atlandı
+
+**Symptom**: "Modern değil", "premium durmuyor", "generic AI". Bağlam yok.
+
+**Cause**: Beğenmeme gerekçe sanıldı.
+
+**Solution**: Bağlam / kullanıcı / ürün gerekçesi yoksa at. `references/06-core-principle.md`, `references/08-review.md`.
+
+---
+
+## Error: Semptomlar ayrı bulgu oldu
+
+**Symptom**: Aynı kök neden beş Orta madde. Rapor uzadı, "Önce bunlar" 11 satır.
+
+**Cause**: Tekrarsızlaştırma yok. Kök neden sorulmadı.
+
+**Solution**: "Bu başka bulgunun semptomu mu?" Semptom kanıta, kök başlığa. `references/08-review.md`.
+
+---
+
+## Error: Şiddet gözlemden seçildi
+
+**Symptom**: Kontrast düşük → Yüksek. Eleman dipnot, görev bitiyor.
+
+**Cause**: Kova, kullanıcı/ürün etkisinden önce seçildi.
+
+**Solution**: Bulgu → etki → şiddet. Kontrast tek başına Yüksek değildir. `references/08-review.md` şiddet.
+
+---
+
+## Error: İlk çözüm yazıldı, alternatif açıklama yok
+
+**Symptom**: "Buton küçük, büyüt." İkincil aksiyon veya sistem kısıtı bakılmadı. A/B/C yok.
+
+**Cause**: İlk açıklama ve ilk çözüm kazandı.
+
+**Solution**: Rakip neden söyle. Problem kesinleşince çözüm A/B/C, seç, yalnız seçileni yaz. `references/08-review.md`.
+
+---
+
+## Error: Dahili arama rapora girdi
+
+**Symptom**: "Önce şunu düşündüm", süzgeç dökümü, üç çözüm yan yana. Rapor eforu uzunlukla gösteriyor.
+
+**Cause**: Çok yüksek efor = uzun rapor sanıldı.
+
+**Solution**: Üret, sorgula, karşılaştır, ele, doğrula — içeride. Rapor `07` iskeleti. `references/08-review.md` efor.
+
+---
+
+## Error: Kanıtsız satır raporda kaldı
+
+**Symptom**: Üç bulgu. Üçüncünün render'ı yok, hâlâ Yüksek [Görsel].
+
+**Cause**: Örtü kontrolü yok.
+
+**Solution**: Kanıtsız satır çıkar veya "İncelenemedi". Güven düşükse ve kanıt yoksa başlık açma. `references/08-review.md` kanıt matrisi.
+
+---
+
+## Error: Ne duruyor uyduruldu
+
+**Symptom**: "Hiyerarşi duruyor", "imza güçlü" — hangi eleman, hangi kanıt yok.
+
+**Cause**: Denge bölümü iltifat sanıldı.
+
+**Solution**: Olumlu satır da kanıt ister. Yoksa bölümü yazma. `references/08-review.md`.
+
+---
+
+## Error: Çok ekran tek tek bitirildi, karşılaştırılmadı
+
+**Symptom**: Landing, Pricing, Settings üç ayrı yığın. Aynı sapma üç kez. Örüntü yok.
+
+**Cause**: Adım 14 karşılaştırma geçişi atlandı.
+
+**Solution**: A/B/C'yi yan yana koy. Örüntü sapması bulgudur. `references/08-review.md` işlem.
+
+---
+
+## Error: Düzeltme sonrası yeniden inceleme yok
+
+**Symptom**: Primary büyüdü, komşu alanı eziyor. "Düzeltildi" ile kapandı.
+
+**Cause**: Render doğrulama, yargı sanıldı.
+
+**Solution**: Düzelt → render → değişen yüzeye ikinci geçiş. `references/08-review.md` review sonrası.
+
+---
+
+## Error: Tanı ile çözüm aynı cümlede
+
+**Symptom**: "Hiyerarşi zayıf, bu yüzden primary'yi büyüt."
+
+**Cause**: `07` bir cümle bir fikir kuralı atlandı.
+
+**Solution**: Tanı ayrı, iş ayrı. İş, dahilde seçilmiş çözümdür. `references/07-writing.md`.

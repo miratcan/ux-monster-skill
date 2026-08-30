@@ -16,11 +16,11 @@ license: Tüm koşullar LICENSE.txt dosyasındadır.
 
 İlk iş modu seçmektir. Zincire ondan sonra gir.
 
-**İncele** — review et, audit, ne yanlış, neden böyle görünüyor. Çıktı rapordur. Kod yok. Analiz adım 1–17'dir; dosya adı yalnız hangi metnin okunacağını gösterir. Rapor: `references/08-review.md`. Yazım: `references/07-writing.md`. Adım çıktısı tablosu iç kontroldür, rapora yazılmaz.
+**İncele** — review et, audit, ne yanlış, neden böyle görünüyor. Çıktı rapordur. Kod yok. Analiz adım 1–17'dir; dosya adı yalnız hangi metnin okunacağını gösterir. Dahili yargı `references/08-review.md`: iki geçiş, gözlem→aday→bulgu, kanıt matrisi, adversarial ve zevk süzgeci. Rapor aynı dosyanın iskeletidir. Yazım: `references/07-writing.md`. Adım çıktısı tablosu ve dahili arama rapora yazılmaz.
 
 **Düzelt / tasarla / yap / uygula.** Çıktı koddur. Zincir `01` → `05`. Yazım: `references/07-writing.md`. Review raporu yazma.
 
-**Review et ve düzelt.** Önce `08` raporu, sonra "Önce bunlar". Varsayılan eşik Kritik ve Yüksek; Orta yalnız yürüyüşü kesiyorsa. Tek başına "düzelt" bu madde değildir.
+**Review et ve düzelt.** Önce `08` raporu, sonra "Önce bunlar". Varsayılan eşik Kritik ve Yüksek; Orta yalnız yürüyüşü kesiyorsa. Düzelt, render et, değişen yüzeyi yeniden incele. Tek başına "düzelt" bu madde değildir.
 
 Karar veya bulgu `references/06-core-principle.md` formuna inemiyorsa o dosyayı oku. Forma giremeyen şey tasarıma da rapora da girmez.
 
@@ -50,7 +50,7 @@ Bu tablo hangi dosyanın ne zaman okunacağını gösterir. Adım içeriği dosy
 
 - `references/06-core-principle.md` — karar ve bulgu formu
 - `references/07-writing.md` — yazım kuralları (her mod)
-- `references/08-review.md` — inceleme raporu ve hibritin rapor yarısı
+- `references/08-review.md` — dahili yargı, rapor iskeleti, hibritin rapor yarısı
 
 ## Adım çıktısı
 
@@ -85,5 +85,5 @@ Bu tablo sırayı değil, adımın bitme koşulunu verir. İçerik `01`–`05` i
 - Yapı bitince `03` (palet, tipografi, imza).
 - Estetik netleşince `04` (a11y, motion, token, kod).
 - Kod yazıldıktan sonra `05`. Doğrulama ve varlık gerekçesi en sık atlanan iki kontroldür. Atlanmaz.
-- İncele: analiz adım 1–17, rapor `08`, yazım `07`. Uymayan adım atlanır, nedeni söylenir.
+- İncele: analiz adım 1–17, dahili yargı ve rapor `08`, yazım `07`. Uymayan adım atlanır, nedeni söylenir. Gözlem bulgu değildir. Efor dahili aramadır, rapor uzunluğu değil.
 - Gerekçe sorusu: `06`.

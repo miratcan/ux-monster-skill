@@ -32,7 +32,7 @@ Bunun yerine karar mümkün olduğunca şu forma indirgenmelidir:
 
 > Kullanıcı X, koşul Y altında, amaç Z'yi gerçekleştirmeye çalışıyor. Bu nedenle A kararını alıyoruz. A kararı B tokenları ve C platform primitive'i ile implement edilecek. Sonuç D doğrulama yöntemiyle kontrol edilecek.
 
-Review'da A henüz kararı değil, bulgudur. Implementasyon cümlesi, kullanıcı düzeltme isteyene kadar yazılmaz. Bulgu şu forma iner:
+Review'da A henüz kararı değil, doğrulanmış bulgudur. Gözlem ve aday bu forma inmez. Implementasyon cümlesi, kullanıcı düzeltme isteyene kadar yazılmaz. Süzgeçler `references/08-review.md` içindedir. Bulgu şu forma iner:
 
 > Kullanıcı X, koşul Y'de Z'yi bitirmeye çalışıyor. Ekran A yüzünden bunu yapamıyor / zorlaşıyor. Şiddet B (adım 5). İş: C.
 

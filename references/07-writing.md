@@ -4,6 +4,8 @@ Kullanıcıya yazılan her çıktı bu dosyaya uyar. Tasarım gerekçesi de, rev
 
 Okuyucu tek geçişte sonucu alsın. Yazarın kafasındaki bağlantıyı çözmek zorunda kalmasın.
 
+Dahili arama rapora girmez. "A'yı düşündüm, sonra B'yi" yazılmaz. Daha fazla efor daha uzun metin demek değildir.
+
 Review raporunun iskeleti burada değildir. O `references/08-review.md` içindedir.
 
 ## Cümle uzunluğu
@@ -61,12 +63,12 @@ Kötü: `Görsel kimlik`, `Hiyerarşi`, `Erişilebilirlik`.
 
 Kullanıcıya yazılan her iddia şu sırayı geçer. Her adım ayrı cümledir.
 
-1. **İddia** — ne yanlış, eksik veya karar. Bu, başlık artı tek satır özettir. Paragrafta tekrar etme.
+1. **İddia (tanı)** — ne yanlış, eksik veya karar. Bu, başlık artı tek satır özettir. Paragrafta tekrar etme.
 2. **Kanıt** — nereden biliyoruz: ölçüm, ekran gözlemi, tıklama, bağlam ekseni.
 3. **Anlam** — kullanıcının işi nasıl etkileniyor.
-4. **İş** — ne yapılmalı.
+4. **İş (çözüm)** — ne yapılmalı. İlk akla gelen değil; dahilde karşılaştırılmış seçim. Alternatifleri rapora dizme.
 
-Kanıtsız iddia bırakma. Anlamsız kanıt bırakma. İddiayı paragrafta yeniden yazıp sonra kanıta geçme.
+Tanı ile çözümü aynı cümlede yapıştırma. Kanıtsız iddia bırakma. Anlamsız kanıt bırakma. İddiayı paragrafta yeniden yazıp sonra kanıta geçme. Olumlu iddia da kanıt ister.
 
 ## Kanıt somuttur
 

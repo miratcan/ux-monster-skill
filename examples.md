@@ -106,7 +106,7 @@ Waitlist formu `<span class="submit">` ile gönderiliyor. `href` yok, `role` yok
 Gerçek `<button type="submit">` yap.
 
 ## Ne duruyor
-Değer cümlesi tek ve okunaklı. Form tek alan. Honeypot `aria-hidden`.
+H1 tek cümle: "Your website has SEO problems you can't see." Form tek e-posta alanı. Honeypot `aria-hidden` ve `tabindex="-1"`.
 
 ## İncelenemedi
 Hover ve canlı animasyon. Token dosyası ayrı, açılmadı. Konum (adım 7) atlandı: tek amaçlı landing, çok adımlı akış değil.
@@ -162,6 +162,78 @@ Kapsam: `dar: primary buton. Adım 17 atlandı çünkü iş ekran değil.` Kontr
 ### Why This Works
 
 Yürüyüş kapsam kadar genişler. Eleman isteği küçük yama skip'i değildir; review durur, 17 daralır.
+
+---
+
+## Example: Gözlem bulgu yazılmadı
+
+**Context**: Hero'da beş eşit ağırlıklı buton. Kullanıcı "sayfayı incele" dedi.
+
+### Problem
+
+Agent "beş buton var"ı Yüksek bulgu yaptı. Zevk cümlesi: "kalabalık duruyor." Kanıt render, iş etkisi yok. İlk çözüm: "butonları sil."
+
+### Solution
+
+Gözlem içeride kaldı. Adversarial: iş indirme; üç buton ikincil, biri primary, biri yasal dipnot. Alternatif açıklama B kazandı: ikincil aksiyon kasıtlı. Aday düştü. Rapora girmedi.
+
+### Why This Works
+
+Gözlem → aday → bulgu. Zevk ve rakip açıklama süzgeci finding sayısını keser. Efor burada harcanır.
+
+---
+
+## Example: Beş semptom bir kök nedene indi
+
+**Context**: Aynı hero. Turuncu, yeşil, mor, teal, sarı yan yana. Primary küçük. Kartlar pencerede. Bölüm etiketleri de turuncu.
+
+### Problem
+
+Dört Orta madde: vurgu rengi, primary ölçeği, yüzen kartlar, bölüm rengi. Hepsi aynı kök: ilk ekranda vurgu tek işe hizmet etmiyor.
+
+### Solution
+
+Tek Yüksek [Görsel]: ilk ekranda vurgu dağınık. Semptomlar kanıt cümlesinde. "Önce bunlar" tek madde. Çözüm dahilde üç adaydı; seçilen: turuncuyu tek vurgu bırak, kartları nötrle.
+
+### Why This Works
+
+Kök neden rapordadır. Semptom ayrı başlık değildir. Çözüm A/B/C rapora dizilmez.
+
+---
+
+## Example: Dahili arama rapora yazılmadı
+
+**Context**: Yüksek efor. Rakip açıklamalar, iki geçerli çözüm.
+
+### Problem
+
+Rapor "önce hiyerarşi sandım, sonra ikincil aksiyon, sonra mobil uyarlama, çözüm A ve B'yi kıyasladım" diye yürüdü.
+
+### Solution
+
+Rapor iskeleti. Tanı, kanıt, anlam, seçilmiş iş. Güven orta ise bir satır. Süzgeç dökümü yok.
+
+### Why This Works
+
+Efor dahili aramadır. Rapor uzunluğu eforu göstermez. `07` ve `08`.
+
+---
+
+## Example: Düzeltme başka problem açtı
+
+**Context**: "Review et ve düzelt." Primary büyütüldü. Render'da form alanını eziyor.
+
+### Problem
+
+Agent "düzeltildi" yazıp bitti. Yeni ezme yargılanmadı.
+
+### Solution
+
+Değişen yüzeye ikinci geçiş. Yeni doğrulanmış bulgu: primary komşu alanı eziyor. "Düzeltildi / yeni: primary'yi küçültmeden grupla." Tam rapor baştan yok.
+
+### Why This Works
+
+İncele → düzelt → render → yeniden incele. Düzeltme doğrulama değildir.
 
 ---
 
