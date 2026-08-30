@@ -91,3 +91,63 @@ Error → solution mappings for quick reference. This file grows over time as ne
 **Cause**: "Düzelt" incele sanıldı.
 
 **Solution**: SKILL.md mod. Düzelt = kod. Rapor ancak "incele" veya "review et ve düzelt" ile yazılır.
+
+---
+
+## Error: URL varken yalnız koda bakıldı
+
+**Symptom**: Canlı sayfa var. Rapor DOM ve kaynak dosyadan. Ekran görüntüsü yok. Kalabalık, ferahlık, gerçek hiyerarşi iddia ediliyor.
+
+**Cause**: Adım 16 atlandı. Yapısal gözlem görsel sonuç sanıldı.
+
+**Solution**: Render'a bak. Görsel iddia render'sız yazılmaz. Yapılamadıysa hüküm yanında "görsel eksen yok" de; yalnız kapsama gömme. Kural: `references/08-review.md`.
+
+---
+
+## Error: Happy-path karesiyle adım 4 atlandı
+
+**Symptom**: Dolu, başarılı ekran incelendi. Empty, error, izin yok yok. Form "durum eksik" diye spekülasyon.
+
+**Cause**: Yürüyüş tek karede bitti. Kırık yol denenmedi.
+
+**Solution**: Ekran/akış incelemesinde en az bir kırık yol dene. URL vermiyorsa "durum görülmedi" yaz. Koddan uydurma. Kural: `references/08-review.md` işlem.
+
+---
+
+## Error: Copy veya hiyerarşi işe bakılmadan Düşük yazıldı
+
+**Symptom**: Primary kayboluyor veya kayıt metni belirsiz. Şiddet Düşük çünkü kova "cilâ / copy".
+
+**Cause**: Adım 5 kovası, adım 1 kilidi olmadan seçildi.
+
+**Solution**: Önce ekranın işi. İş kayıt, indirme veya güven ise onu bozan copy/hiyerarşi Yüksek olabilir. Kural: `references/08-review.md` şiddet.
+
+---
+
+## Error: İncelemede yalnız 08 okundu, adım 1–17 taranmadı
+
+**Symptom**: Rapor iskeleti doğru. Hüküm, kapsam, madde var. Analiz yok: iş söylenmemiş, yürüyüş yok, atlanan adım yok.
+
+**Cause**: `08` rapor sözleşmesi analiz sanıldı.
+
+**Solution**: Analiz adım 1–17. `08` nasıl yazılacağıdır. SKILL.md incele satırı. Uymayan adım atlanır, nedeni "İncelenemedi"de durur.
+
+---
+
+## Error: Ortak tema yokken tek anlatı uyduruldu
+
+**Symptom**: Biri checkout kırığı, biri şablon palet. Hüküm "ürün güvensiz" gibi tek hikâye.
+
+**Cause**: Tek cümle hüküm, tek tema sanıldı.
+
+**Solution**: Tema adım 1 işine veya tek bir adım 5 maliyetine bağlanamıyorsa: "N bağımsız bulgu var, en pahalısı: …" Kural: `references/06-core-principle.md`, `references/08-review.md`.
+
+---
+
+## Error: Dar istek tam yürüyüşe çevrildi
+
+**Symptom**: "Bu butonun rengini incele" deyince 5 saniye testi, empty state, mobile kırılım üretildi.
+
+**Cause**: Ekran/akış yürüyüşü her review'a uygulandı.
+
+**Solution**: Kapsam kadar yürüyüş. Elemanda adım 17 atlanır, nedeni kapsamda. Kural: `references/08-review.md` işlem.

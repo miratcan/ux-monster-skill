@@ -76,7 +76,7 @@ Adım bitti demek, bu dört bloğun söylenebilmesidir. Dosyayı okumak yetmez.
 
 ## Example: Review raporu zincir iskeletiyle yazılmadı
 
-**Context**: Canlı bir pazarlama sitesi. Kullanıcı "bu siteyi review et" dedi. Agent analizi `01`–`05` ile yaptı. Raporu da 17 başlık halinde döktü: Bağlam, Varlık, Hiyerarşi, Odak, Estetik…
+**Context**: Canlı bir pazarlama sitesi. Kullanıcı "bu siteyi review et" dedi. Agent analizi adım 1–17 ile yaptı. Raporu da 17 başlık halinde döktü: Bağlam, Varlık, Hiyerarşi, Odak, Estetik…
 
 ### Problem
 
@@ -84,25 +84,84 @@ Okuyucu ürün sahibidir. Framework'ü bilmez. "5. Hiyerarşi" başlığı bir b
 
 ### Solution
 
-Rapor `references/08-review.md` iskeletine çekildi. Yazım `references/07-writing.md`. Hüküm en başa alındı. Her bölüm başlık + tek satır özet. Şiddet başlıkta.
+Rapor `references/08-review.md` iskeletine çekildi. Yazım `references/07-writing.md`. Hüküm en başa alındı. Her bölüm başlık + tek satır özet. Şiddet ve kanıt türü başlıkta. Adım 1–17 içeride kaldı.
 
 ```text
 # Marketing site review
 
 Site üç görsel kimlik taşıyor. Waitlist, Product ve Pricing aynı ürün gibi durmuyor.
 
-**Kapsam:** Desktop landing, Product, Security, Pricing. Mobile bakılmadı.
+**Kapsam:** İş: waitlist'e kaydolmak. Desktop 1280 landing, Product, Security, Pricing. Mobile 390. Kayıt formu boş ve hata denendi.
 
-## Yüksek: Site üç görsel kimlik taşıyor
+## Yüksek [Görsel]: Site üç görsel kimlik taşıyor
 Waitlist, Product ve Pricing aynı ürün gibi durmuyor.
 Waitlist koyu ve sinematik. Product açık ve şablon-SaaS. Pricing ikisinin karışımı, kendine ait bir teal rengiyle.
 Aynı ürün üç ayrı yere ait gibi duruyor. Güven dağılır.
 Paleti bir kimliğe indir.
+
+## Orta [DOM]: Gönder butonu gerçek button değil
+Kayıt, klavye ve ekran okuyucu için kırılıyor.
+Waitlist formu `<span class="submit">` ile gönderiliyor. `href` yok, `role` yok.
+İş kayıt. Görev klavyeyle bitemiyor.
+Gerçek `<button type="submit">` yap.
+
+## Ne duruyor
+Değer cümlesi tek ve okunaklı. Form tek alan. Honeypot `aria-hidden`.
+
+## İncelenemedi
+Hover ve canlı animasyon. Token dosyası ayrı, açılmadı. Konum (adım 7) atlandı: tek amaçlı landing, çok adımlı akış değil.
+
+## Önce bunlar
+1. Gönder'i gerçek button yap.
+2. Paleti bir kimliğe indir.
+3. Pricing teal'ini vurgu olmaktan çıkar.
 ```
 
 ### Why This Works
 
 Zincir analiz yöntemidir. Rapor okuyucu belgesidir. Yazım kuralları hükmü başa koyar. Okuyucu geri kalanını okumasa da sonucu alır.
+
+---
+
+## Example: Ortak tema yokken hüküm uydurulmadı
+
+**Context**: Checkout ve ayarlar aynı oturumda incelendi. Biri ödeme onayı, biri şablon palet.
+
+### Problem
+
+Agent tek hüküm yazdı: "Ürün güvensiz duruyor." Ödeme kırığı ile teal vurgu aynı hikâyeye sıkıştı. Uydurma senaryo hükme sızdı.
+
+### Solution
+
+Ortak tema adım 1 işine veya tek bir adım 5 maliyetine bağlanamadı. Hüküm:
+
+```text
+2 bağımsız bulgu var, en pahalısı: ödeme geri alınamıyor.
+```
+
+"Önce bunlar" o cümledeki en pahalıdan başlar.
+
+### Why This Works
+
+`06` ve `08` tek cümle ister, tek tema zorlamaz. Bağ yoksa sayı ve en pahalısı yeter.
+
+---
+
+## Example: Dar inceleme tam yürüyüşe çevrilmedi
+
+**Context**: Kullanıcı "bu butonun rengini incele" dedi. Ekran bir dashboard.
+
+### Problem
+
+Agent adım 17'yi ekran görevi olarak açtı. 5 saniye testi, empty state, mobile kırılım. İstek renk idi.
+
+### Solution
+
+Kapsam: `dar: primary buton. Adım 17 atlandı çünkü iş ekran değil.` Kontrast, vurgu tekliği, token adı. Rapor `08`. Tam yürüyüş yok.
+
+### Why This Works
+
+Yürüyüş kapsam kadar genişler. Eleman isteği küçük yama skip'i değildir; review durur, 17 daralır.
 
 ---
 

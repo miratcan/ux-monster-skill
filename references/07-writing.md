@@ -40,7 +40,7 @@ Waitlist, Product ve Pricing aynı ürün gibi durmuyor.
 Waitlist koyu ve sinematik. Product açık ve şablon-SaaS. Pricing ikisinin karışımı.
 ```
 
-Bütün metnin de en başında tek cümlelik bir hüküm vardır. Review'da bu hüküm raporu özetler. Tasarım gerekçesinde bu hüküm alınan kararı özetler.
+Bütün metnin de en başında tek cümlelik bir hüküm vardır. Review'da bu hüküm raporu özetler. Tasarım gerekçesinde bu hüküm alınan kararı özetler. Hüküm tek cümledir; tek tema zorunlu değildir. Ortak bağ yoksa kaçış `references/08-review.md` ve `references/06-core-principle.md` içindedir.
 
 ## Bir cümle, bir fikir
 
@@ -102,4 +102,4 @@ Bir iddia beş bağlam ekseninden veya zincirdeki bir adımdan birine bağlanam�
 
 ## Okuyucu zinciri bilmek zorunda değil
 
-Analizi `01`–`05` ile yap. Metni 17 bölüm halinde yazma. "5. Hiyerarşi" diye başlık açma. Okuyucu ürünü konuşuyor, framework'ü değil.
+Analizi adım 1–17 ile yap. Dosya adı yalnız hangi metnin okunacağını gösterir. Metni 17 bölüm halinde yazma. "5. Hiyerarşi" diye başlık açma. Okuyucu ürünü konuşuyor, framework'ü değil.

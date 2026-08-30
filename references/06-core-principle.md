@@ -32,7 +32,11 @@ Bunun yerine karar mümkün olduğunca şu forma indirgenmelidir:
 
 > Kullanıcı X, koşul Y altında, amaç Z'yi gerçekleştirmeye çalışıyor. Bu nedenle A kararını alıyoruz. A kararı B tokenları ve C platform primitive'i ile implement edilecek. Sonuç D doğrulama yöntemiyle kontrol edilecek.
 
-Review'da A henüz kararı değil, bulgudur. Implementasyon cümlesi, kullanıcı düzeltme isteyene kadar yazılmaz.
+Review'da A henüz kararı değil, bulgudur. Implementasyon cümlesi, kullanıcı düzeltme isteyene kadar yazılmaz. Bulgu şu forma iner:
+
+> Kullanıcı X, koşul Y'de Z'yi bitirmeye çalışıyor. Ekran A yüzünden bunu yapamıyor / zorlaşıyor. Şiddet B (adım 5). İş: C.
+
+Raporun başındaki hüküm ayrıdır. Ortak tema adım 1'deki işe veya tek bir adım 5 maliyetine bağlanabiliyorsa tek anlatı yaz. Bağlanamıyorsa tema uydurma. O zaman hüküm: "N bağımsız bulgu var, en pahalısı: …" Hâlâ tek cümledir. "N bulgu var" tek başına hüküm değildir.
 
 Bu dokümanın kasıtlı olarak ayrı bir "tamamlama kontrol listesi" yoktur. Her bölüm (`01` - `05` dosyaları) zaten kendi kontrol noktasını taşıyor; bunları ayrı bir özet listede tekrar etmek, doküman güncellendiğinde iki kaynağın birbirinden kopmasına (drift) yol açar. Bir kararın eksiksiz olup olmadığını kontrol etmenin tek yolu, ilgili bölümün kendisine dönmektir — kopyasına değil.
 

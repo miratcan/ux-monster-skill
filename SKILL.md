@@ -16,11 +16,11 @@ license: Tüm koşullar LICENSE.txt dosyasındadır.
 
 İlk iş modu seçmektir. Zincire ondan sonra gir.
 
-**İncele** — review et, audit, ne yanlış, neden böyle görünüyor. Çıktı rapordur. Kod yok. Yazım: `references/07-writing.md`. Rapor: `references/08-review.md`. Analiz için ilgili `01`–`05` dosyalarını oku.
+**İncele** — review et, audit, ne yanlış, neden böyle görünüyor. Çıktı rapordur. Kod yok. Analiz adım 1–17'dir; dosya adı yalnız hangi metnin okunacağını gösterir. Rapor: `references/08-review.md`. Yazım: `references/07-writing.md`. Adım çıktısı tablosu iç kontroldür, rapora yazılmaz.
 
 **Düzelt / tasarla / yap / uygula.** Çıktı koddur. Zincir `01` → `05`. Yazım: `references/07-writing.md`. Review raporu yazma.
 
-**Review et ve düzelt.** Önce rapor, sonra listedeki işler. Tek başına "düzelt" bu madde değildir.
+**Review et ve düzelt.** Önce `08` raporu, sonra "Önce bunlar". Varsayılan eşik Kritik ve Yüksek; Orta yalnız yürüyüşü kesiyorsa. Tek başına "düzelt" bu madde değildir.
 
 Karar veya bulgu `references/06-core-principle.md` formuna inemiyorsa o dosyayı oku. Forma giremeyen şey tasarıma da rapora da girmez.
 
@@ -28,7 +28,7 @@ Kullanıcıya cümle yazmadan `references/07-writing.md` uygula.
 
 ## Ne zaman durur
 
-Dur: UI kararı değişmeyen backend, API, şema, bugfix. Mevcut token'a bağlı 1-2 satırlık yama. Böyle işte zinciri baştan işletme. Gerekirse yalnızca ilgili adımı oku (`04` token/implementasyon, `05` doğrulama).
+Dur: UI kararı değişmeyen backend, API, şema, bugfix. Mevcut token'a bağlı 1-2 satırlık yama. Böyle işte zinciri baştan işletme. Gerekirse yalnızca ilgili adımı oku (`04` token/implementasyon, `05` doğrulama). İncele bu skip'in dışındadır: "bu ekranı incele" adım 1–17'yi tarar. Dar istek (`bu butonun rengini incele`) review'ı iptal etmez; yürüyüş daralır (`references/08-review.md`).
 
 Bağlam zaten netse `01`'i tekrar sorma. Bilineni kullanıcıya geri sorma.
 
@@ -50,13 +50,13 @@ Bu tablo hangi dosyanın ne zaman okunacağını gösterir. Adım içeriği dosy
 
 - `references/06-core-principle.md` — karar ve bulgu formu
 - `references/07-writing.md` — yazım kuralları (her mod)
-- `references/08-review.md` — review rapor iskeleti (yalnız incele)
+- `references/08-review.md` — inceleme raporu ve hibritin rapor yarısı
 
 ## Adım çıktısı
 
 Bir adımı okumak yetmez. O adımın çıktısı söylenebilmelidir. Yoksa adım atlanmış sayılır.
 
-Bu tablo sırayı değil, adımın bitme koşulunu verir. İçerik `01`–`05` içindedir.
+Bu tablo sırayı değil, adımın bitme koşulunu verir. İçerik `01`–`05` içindedir. İncelemede bu çıktılar rapora yazılmaz; her adım içeride söylenebilir veya atlandı + neden. Test hipotezi ekran/akış incelemesinde varsayılan açıktır; eleman incelemesinde atlanır. Ayrıntı `references/08-review.md`.
 
 | Adım | Bitme koşulu |
 |------|----------------|
@@ -85,5 +85,5 @@ Bu tablo sırayı değil, adımın bitme koşulunu verir. İçerik `01`–`05` i
 - Yapı bitince `03` (palet, tipografi, imza).
 - Estetik netleşince `04` (a11y, motion, token, kod).
 - Kod yazıldıktan sonra `05`. Doğrulama ve varlık gerekçesi en sık atlanan iki kontroldür. Atlanmaz.
-- İncele: `08`, yazım `07`, analiz için ilgili `01`–`05`.
+- İncele: analiz adım 1–17, rapor `08`, yazım `07`. Uymayan adım atlanır, nedeni söylenir.
 - Gerekçe sorusu: `06`.
