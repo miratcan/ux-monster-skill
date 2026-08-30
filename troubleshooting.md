@@ -104,6 +104,16 @@ Error → solution mappings for quick reference. This file grows over time as ne
 
 ---
 
+## Error: Görsel bulguda kare rapora girmedi
+
+**Symptom**: `[Görsel]` bulgu yalnız tarif. Ekran görüntüsü alındı, dahilde duruyor. Okuyucu kareyi görmüyor. Ya da alt yazı başlığı tekrar ediyor: "Hiyerarşi zayıf."
+
+**Cause**: Kare doğrulama aracı sanıldı, rapor kanıtı sanılmadı.
+
+**Solution**: `[Görsel]` bulgunun altına kare. Alt yazı karede görülen somut şeyi söyler, iddiayı tekrar etmez. Yürüyüş galerisi yok. Kural: `references/08-review.md` kare raporda.
+
+---
+
 ## Error: Happy-path karesiyle adım 4 atlandı
 
 **Symptom**: Dolu, başarılı ekran incelendi. Empty, error, izin yok yok. Form "durum eksik" diye spekülasyon.

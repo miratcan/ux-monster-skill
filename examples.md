@@ -96,6 +96,8 @@ Site üç görsel kimlik taşıyor. Waitlist, Product ve Pricing aynı ürün gi
 ## Yüksek [Görsel]: Site üç görsel kimlik taşıyor
 Waitlist, Product ve Pricing aynı ürün gibi durmuyor.
 Waitlist koyu ve sinematik. Product açık ve şablon-SaaS. Pricing ikisinin karışımı, kendine ait bir teal rengiyle.
+[kare: waitlist hero / product hero]
+Waitlist neredeyse siyah, tek indigo vurgu. Product açık gri zemin, kart ızgarası.
 Aynı ürün üç ayrı yere ait gibi duruyor. Güven dağılır.
 Paleti bir kimliğe indir.
 

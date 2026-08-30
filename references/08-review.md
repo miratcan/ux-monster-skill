@@ -96,6 +96,23 @@ Canlı URL varsa render'dan ayrılma. Ortam headless tarayıcı sunuyorsa ekran 
 
 Rapor yazılmadan örtü kontrolü: her adayın kanıtı var mı. Kanıtsız satır çıkar. Üç bulgudan biri kanıtsızsa o satır yoktur; rapor iki bulgudur.
 
+## Kare raporda
+
+Dahili kare yetmez. `[Görsel]` bulgu, okuyucunun gördüğü rapora kare ile girer. Chat'te bulgunun altında göster. HTML veya PDF'de göm; ayrı klasöre bağlı bırakma.
+
+`[Etkileşim]` bulguda davranış karede görünüyorsa aynı kural: açık menü, native hata balonu, kırık gönderim. `[DOM]` yalnız yapı ise kare yok.
+
+Kare doğrulanmış bulguya bağlıdır. Yürüyüş galerisi rapora dökülmez. Karşılaştırma iki kareyi hak eder: viewport, önce/sonra, A/B. Üçüncü kare aynı iddiayı tekrarlıyorsa düş.
+
+Alt yazı iddiayı tekrar etmez. Karede görülen somut şeyi söyler. Bir kanıt cümlesine bağlıdır; bağlanamıyorsa kare düşer.
+
+```text
+Kötü: Hiyerarşi zayıf.
+İyi:  Kırk kart aynı boy. Her birinde Ücretsiz rozeti.
+```
+
+Kare gösterilemiyorsa bulguyu karesiz `[Görsel]` yazma. Ya kareyi koy, ya iddiayı "İncelenemedi"ye al.
+
 ## Adversarial kontrol
 
 Aday rapora girmeden önce bu sorulara ayrı cevap ver. Biri hayırsa düşür veya "İncelenemedi".
@@ -230,6 +247,7 @@ Bulgu `references/06-core-principle.md` review cümlesine iner. İnemezse rapora
 ## [Şiddet] [DOM|Görsel|Etkileşim]: [Bulgu başlığı]
 [Tanı — tek satır.]
 [Kanıt.]
+[Kare — [Görsel] zorunlu. [Etkileşim] karede görünüyorsa zorunlu. Alt yazı iddiayı tekrar etmez.]
 [Anlam — işe etkisi.]
 [İş — seçilmiş çözüm.]
 [Güven yalnız yüksek değilse.]
